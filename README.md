@@ -302,6 +302,8 @@ lot 개발자 WPF 학습리포지토리 2025
 7. Models > Genre(DivisionTbl) 모델 작업 
 8. BookGenreViewModel DB 처리 구현  
 
+    https://github.com/user-attachments/assets/5aa79cf8-0f32-4d41-8d39-ead672d8c4c6
+
 ## 4일차
 
 ### DB 연결 CRUD 연습(계속)
