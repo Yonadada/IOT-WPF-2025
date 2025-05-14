@@ -306,16 +306,90 @@ lot 개발자 WPF 학습리포지토리 2025
 
 ## 4일차
 
-### DB 연결 CRUD 연습(계속)
-1.
+### DB연결 CRUD 연습(계속)
+1. BookGenre에서 INSERT, UPDATE 기능 구현
+2. NLog.config 생성
+3. Helpers.Common 클래스 생성
+    - NLog 인스턴스 생성
+    - 공통 DB연결문자열 생성
+    - MahApps.Metro 다이얼로그 코디네이터 생성
+4. 각 ViewModel에 IDialogCoordinator 관련 코딩 추가
+    - ViewModel 생성자에 파라미터 추가
+    - View, ViewModel 연동시 IDialogCoordinator 연결
+5. View에 Dialog관련 네임스페이스, 속성 추가
+6. await this.dialogCoordinator.ShowMessageAsync() 사용
 
+    <img src="./image/wpf0011.png" width="650">
 
-#### DB 연결 CRUD 연습시 필요사항 
-- [ ] NLog로 각 기능 동작시 로그 남기기
-- [ ] DB 쿼리 모델로 이전
-- [ ] 연결 문자열 Common으로 이전
-- [ ] MahApps.Metro 메세지 형태로 변경
-- [ ] 삭제 여부 메시지박스 추가 
-- [ ] 종료 메뉴아이템 
+7. BookView.xaml 화면작업
+8. MemberView.xaml, RentalView.xaml 화면작업
+9. ViewModel들 작업
+
+    <img src="./image/wpf0012.png" width="650">
+
+#### DB연결 CRUD 연습시 추가 필요사항
+- [x] 여러번 나오는 로직 메서드화
+- [x] NLog로 각 기능 동작시 로그남기기. 공통화작업
+- [x] 연결문자열 Common으로 이전
+- [x] 종료 메뉴 다이얼로그 MetroUI로 변경
+- [x] MahApps.Metro 메시지형태로 변경
+- [x] 삭제여부 메시지박스 추가
+
+### DB연결 CRUD 실습
+- BooksView, BooksViewModel 작업 실습
+- 1일차 MVVM 내용, 오늘 학습한것 
+
+## 5일차
+
+### MovieFinder 2025 
+- 전체 UI : UI 설계화면 다섯 영역으로 구분 
+
+<img src="./image/wpf0014.png" width="650">
+
+- 영화즐겨찾기앱
+    - TMDB 사이트에서 제공하는 OpenAPI로 데이터 가져오기
+    - 내가 좋아하는 영화리스트 선택, 즐겨찾기 저장
+    - 저장한 영화만 리스트업, 삭제 가능
+    - 선택한 영화 더블클릭 > 영화 상세정보 팝업
+    - 선택된 영화 선택 > 예고편보기 > Youtube동영상 팝업
+
+- TMDB, Youtube
+    - [TMDB](https://www.themoviedb.org/) API 신청
+    - Youtube Data API 신청
+        -프로젝트 생성 후 API 및 서비스 > 라이브러리
+        - YouTube Data API v3 선택
+        - 사용버튼 클릭
+        - 사용자 인증 정보 입력
+
+### 프로젝트 시작
+1. WPF 프로젝트 생성
+2. NuGet 패키지 사용할 기본 라이브러리 설치 
+    - CommunityToolkit.MvvM 설치
+    - MahApps.Metro , MahApps.Metro.IconPacks설치
+    - MySql.Data 
+    - NLog 
+3. 폴더생성 : Helpers, Models, ViewModels, Views
+4. MvvM 구조 초기 작업
+5. UI  구현
+
+    <img src="./image/wpf0015.png" width="650">
+
+6. 로직 구현
+    1. TMDB API 사용 구현
+    2. 관련 기능 전부 구현
+
+7. 데이터 그리트 더블 클릭 > 상세정보 표시 
+    - NuGet 패키지에서 Microsoft.Xaml.Behaviors.Wpf 설치
+8. 텍스트 박스에서 엔터시 이벤트 발생 처리
+9. 텍스트 박스 한글 입력 우선 처리
+10. 실행시 텍스트박스에서 포커스가 가도록 처리
+
+## 6일차
+
+### MovieFinder 2025 (계속)
+1. 상태 표시줄 시계 동작
+2. 상태 표시줄 검색 결과 건수 표시
+3. 즐겨찾기 DB 연동
+
 
 
