@@ -10,6 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="NoPicture.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="icons8-movie-64.ico" />
   </ItemGroup>
 
@@ -20,6 +24,10 @@
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
     <PackageReference Include="MySql.Data" Version="9.3.0" />
     <PackageReference Include="NLog" Version="5.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="NoPicture.png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -19,7 +19,7 @@ namespace MovieFinder2025.ViewModels
             this.dialogCoordinator = coordinator;
 
             Common.LOGGER.Info("MovieFinder2025 Start.");
-            PosterUri = new Uri("~/Views/NoPicture.png", UriKind.RelativeOrAbsolute);
+            PosterUri = new Uri("/NoPicture.png", UriKind.RelativeOrAbsolute);
         }
 
         private string _movieName;
@@ -46,32 +46,36 @@ namespace MovieFinder2025.ViewModels
             get => _selectedMovieItem;
             set
             {
+
                 SetProperty(ref _selectedMovieItem, value);
-                
-                // null 체크 
-                if (value != null && !string.IsNullOrEmpty(value.Poster_path))
+
+                if (value == null)
                 {
-                    try
-                    {
-                    PosterUri = new Uri($"{_base_url}{value.Poster_path}", UriKind.Absolute);
-                    Common.LOGGER.Info($"Selected Movie Item > {value.Poster_path}");
-
-                    }
-                    catch
-                    {
-                    //Url 잘못된 경우
-                    PosterUri = new Uri("Views/NoPicture.png", UriKind.Absolute);
-
-                    }
-
+                    PosterUri = new Uri("Views/NoPicture.png", UriKind.Relative);
+                    Common.LOGGER.Info("선택된 영화가 null → 기본 이미지 사용");
+                    return;
                 }
-                else
+
+                if (string.IsNullOrWhiteSpace(value.Poster_path))
                 {
-                    Common.LOGGER.Info("선택한 영화 포스터 없음");
-                    PosterUri = new Uri("Views/NoPicture.png", UriKind.RelativeOrAbsolute);
+                    PosterUri = new Uri("Views/NoPicture.png", UriKind.Relative);
+                    Common.LOGGER.Warn("포스터 경로 없음 → 기본 이미지 사용");
+                    return;
+                }
+
+                try
+                {
+                    PosterUri = new Uri($"{_base_url}{value.Poster_path}", UriKind.Absolute);
+                    Common.LOGGER.Info($"포스터 설정: {_base_url}{value.Poster_path}");
+                }
+                catch (Exception ex)
+                {
+                    PosterUri = new Uri("Views/NoPicture.png", UriKind.Relative);
+                    Common.LOGGER.Error($"포스터 URI 예외 발생 → 기본 이미지 사용: {ex.Message}");
                 }
             }
         }
+        
         public Uri PosterUri {
             get => _posterUri; 
             set =>SetProperty(ref _posterUri, value);
@@ -150,7 +154,7 @@ namespace MovieFinder2025.ViewModels
             {
                 StringBuilder sb = new StringBuilder();
 
-                //Enviroment.NewLine은 줄바꿈을 의미
+                //Environment.NewLine은 줄바꿈을 의미
                 //sb.Append(currMovie.Original_title + "(" + currMovie.Release_date.ToString("yyyy-MM-dd") + ")" + Environment.NewLine);
                 sb.Append($"{currMovie.Original_title} ({currMovie.Release_date.ToString("yyyy-MM-dd")})\n");
                 sb.Append($"평점 : {currMovie.Vote_average.ToString("F2")}\n");
