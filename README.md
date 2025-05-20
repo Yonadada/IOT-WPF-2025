@@ -397,7 +397,7 @@ lot 개발자 WPF 학습리포지토리 2025
     2. movieitems 테이블생성. 컬럼은 MovieItem.cs 속성과 동일
     3. INSERT, UPDATE, DELETE 작업 
 
-    <img src="./image/wpf0016.png" width="650">
+    <img src="./image/wpf0017.png" width="650">
 
 5. Youtube 예고편 보기
     1. TrailerView, TrailerViewModel
@@ -445,7 +445,7 @@ lot 개발자 WPF 학습리포지토리 2025
 
 ### 스마트홈 연동 모니터링 앱
 
-<img src="./image/WPF0022.jpg" width="650">
+<img src="./image/wpf0022.jpg" width="650">
 
 - 전면부
 
@@ -554,6 +554,3 @@ lot 개발자 WPF 학습리포지토리 2025
 5. WPF MvvM 전체 구현
 
 6. MqttPub.py와 Publish된 IoT 데이터 WPF에서 Subscribe 예제
-
-    https://github.com/user-attachments/assets/bcd9b54e-706f-4f29-95db-e0da6edbb1d3
-
