@@ -57,7 +57,7 @@ try:
         ## 센싱 데이터를 json 형태로 변경
         ## OrderedDict로 먼저 구성 
         raw_data = OrderedDict() # 순서가 있는 딕셔너리타입 객체 
-        raw_data['PUP_ID']  =  PUB_ID
+        raw_data['PUB_ID']  =  PUB_ID
         raw_data['COUNT'] = COUNT
         raw_data['SENSING_DT'] = currtime.strftime(f'%Y-%m-%d, %H:%M:%S') # c#의 'yyyy-MM-dd HH:MM:SS' 같음
         raw_data['TEMP'] = f'{temp:0.1f}' # 소수점 1자리만 나오도록 
