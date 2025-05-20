@@ -445,11 +445,11 @@ lot 개발자 WPF 학습리포지토리 2025
 
 ### 스마트홈 연동 모니터링 앱
 
-<img src="./image/wpf0021.png" width="650">
+<img src="./image/WPF0022.jpg" width="650">
 
 - 전면부
 
-<img src="./image/wpf0022.png" width="650">
+<img src="./image/WPF0023.jpg" width="650">
 
 - 후면부
 - [개발링크] (https://github.com/hugoMGSung/hungout-with-arduino/tree/main/SmartHomeDIY)
@@ -554,3 +554,6 @@ lot 개발자 WPF 학습리포지토리 2025
 5. WPF MvvM 전체 구현
 
 6. MqttPub.py와 Publish된 IoT 데이터 WPF에서 Subscribe 예제
+
+    https://github.com/user-attachments/assets/bcd9b54e-706f-4f29-95db-e0da6edbb1d3
+
