@@ -569,16 +569,14 @@ lot 개발자 WPF 학습리포지토리 2025
 - MQTT 센서 데이터로 동작용 변수 값 할당
 - 실행화면
 
-    <>
+    https://github.com/user-attachments/assets/86d07cbd-d9ce-4110-9921-e1ac9588618d
 
-    스마트홈 조작 영상
+      스마트홈 조작 영상
 
-    <>
+     https://github.com/user-attachments/assets/c54b7609-306f-4628-8c18-903f61e1b72b
 
     스마트홈 모니터링앱 동작영상
 
 #### 스마트홈 WPF 실시간 시각화
-
-
 
 ### Github 대문 꾸미기
