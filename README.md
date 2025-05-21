@@ -554,3 +554,31 @@ lot 개발자 WPF 학습리포지토리 2025
 5. WPF MvvM 전체 구현
 
 6. MqttPub.py와 Publish된 IoT 데이터 WPF에서 Subscribe 예제
+
+
+## 10일차
+
+### 스마트홈 연동 모니터링 연동(계속)
+
+#### 스마트홈 WPF 실시간 시각화
+- NuGet 패키지
+    - MQTTNe
+    - Newtonsoft.Json
+    - NLog
+- WpfMqttSubApp.Models의 SensingInfo.cs 가져오기
+- MQTT 센서 데이터로 동작용 변수 값 할당
+- 실행화면
+
+    <>
+
+    스마트홈 조작 영상
+
+    <>
+
+    스마트홈 모니터링앱 동작영상
+
+#### 스마트홈 WPF 실시간 시각화
+
+
+
+### Github 대문 꾸미기
